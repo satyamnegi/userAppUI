@@ -1,0 +1,172 @@
+<app-menu></app-menu>
+<h3>Create User</h3>  
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" >
+    <div [hidden]="submitted" style="width: 900px;">
+      <div class="col-xs-7 col-sm-7 col-lg-7 col-md-7" style="padding-top:20px;">
+        <div style="webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+   margin:0 auto;height:auto">
+            <div style="padding:30px;">
+      <form [formGroup]="personsaveform" (ngSubmit)="savePerson(personsaveform.value)">
+          <!-- <div class="form-group">
+              <label for="name">First Name</label>
+              <input type="text" class="form-control"  formControlName="firstName" data-toggle="tooltip" 
+                 data-placement="right" title="Enter First Name" >
+              <div class="alert alert-danger" *ngIf = "(PersonFirstName.touched) && (PersonFirstName.invalid)" 
+                style="margin-top: 5px;">
+                  <span *ngIf="PersonFirstName.errors.required">First Name is Required</span>
+                </div>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control"  formControlName="lastName" data-toggle="tooltip" 
+               data-placement="right" title="Enter Last Name" >
+            <div class="alert alert-danger" *ngIf = "(PersonLastName.touched) && (PersonLastName.invalid)" 
+              style="margin-top: 5px;">
+                <span *ngIf="PersonLastName.errors.required">Last Name is Required</span>
+              </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Age</label>
+          <input type="text" class="form-control"  formControlName="age" data-toggle="tooltip" 
+             data-placement="right" title="Enter Last Name" >
+          <div class="alert alert-danger" *ngIf = "(PersonAge.touched) && (PersonAge.invalid)" 
+            style="margin-top: 5px;">
+              <span *ngIf="PersonAge.errors.required">Age is Required</span>              
+            </div>
+      </div>
+  
+          <div class="form-group">
+              <label for="name">Favourite Colour</label>
+              <input type="text" class="form-control" formControlName="favouriteColour" 
+                data-toggle="tooltip" data-placement="right" title="Enter Person Favourite Colour">
+                <div class="alert alert-danger" *ngIf = "(PersonFavouriteColour.touched) && (PersonFavouriteColour.invalid)" 
+                style="margin-top: 5px;">
+                  <span *ngIf="PersonFavouriteColour.errors.required">Favourite Colour is Required</span>               
+                </div>
+          </div>
+
+        <div class="form-group">
+        <label for="branch">Hobby</label>
+          <ejs-multiselect id='multiselectelement' formControlName="hobby" [dataSource]='skillset' 
+          [popupHeight]='popupHeight' [popupWidth]='popupWidth' [placeholder]='placeholder'>
+      </ejs-multiselect>
+      <div *ngIf="PersonHobby.invalid && (PersonHobby.dirty || PersonHobby.touched)"
+          class="alert alert-danger">
+          <div *ngIf="PersonHobby.errors.required">
+              Hobby is required.
+          </div>
+        </div>
+        </div>
+        
+
+          <div class="form-group" style="padding-top:10px;">
+              <label for="branch">Hobby</label>
+                <select class="form-control" formControlName="hobby" data-toggle="tooltip" 
+                      data-placement="right" title="Select Hobby">
+                    <option value="null">--Select Branch--</option>
+                  <option value="B-Tech">B-Tech</option>
+                  <option value="BCA">BCA</option>
+                  <option value="MCA">MCA</option>
+                  <option value="M-Tech">M-Tech</option>
+                </select>
+          </div>
+  
+          <button type="submit" class="btn btn-success">Submit</button> -->
+          
+        <div class="form-group" style="padding-top:20px;">
+            <div class="e-float-input">
+                <input type="text" formControlName="firstName" name="firstName" maxlength="10" />
+                <span class="e-float-line e-label-top"></span>
+                <label class="e-float-text e-label-top">First Name</label>
+                <div *ngIf="PersonFirstName.invalid && (PersonFirstName.dirty || PersonFirstName.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="PersonFirstName.errors.required">
+                      FirstName is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="padding-top:20px;">
+            <div class="e-float-input">
+                <input type="text" formControlName="lastName" name="smail" maxlength="15" />
+                <span class="e-float-line e-label-top"></span>
+                <label class="e-float-text e-label-top">Last Name</label>
+                <div *ngIf="PersonLastName.invalid && (PersonLastName.dirty || PersonLastName.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="PersonLastName.errors.required">
+                        Last Name is required.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" style="padding-top:20px;">
+          <div class="e-float-input">
+              <input type="text" formControlName="age" name="age" maxlength="2" />
+              <span class="e-float-line e-label-top"></span>
+              <label class="e-float-text e-label-top">Age</label>
+              <div *ngIf="PersonAge.invalid && (PersonAge.dirty || PersonAge.touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="PersonAge.errors.required">
+                      Age is required.
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="form-group" style="padding-top:20px;">
+        <div class="e-float-input">
+            <input type="text" formControlName="favouriteColour" name="favouriteColour" maxlength="10" />
+            <span class="e-float-line e-label-top"></span>
+            <label class="e-float-text e-label-top">Favourite Colour</label>
+            <div *ngIf="PersonFavouriteColour.invalid && (PersonFavouriteColour.dirty || PersonFavouriteColour.touched)"
+                class="alert alert-danger">
+                <div *ngIf="PersonFavouriteColour.errors.required">
+                  Favourite Colour is required.
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="form-group" style="padding-top:20px;">
+          <ejs-multiselect formControlName="hobby" name="skillname" [dataSource]='skillset'
+              [placeholder]='placeholder'>
+          </ejs-multiselect>
+          <div *ngIf="PersonHobby.invalid && (PersonHobby.dirty || PersonHobby.touched)"
+              class="alert alert-danger">
+              <div *ngIf="PersonHobby.errors.required">
+                  Hobby is required.
+              </div>
+          </div>
+      </div>
+        <div class="form-group" style="padding:20px;">
+          <button type="submit" style="text-align: center;margin:auto;"  class="btn btn-success">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+      <div [hidden]="!submitted">
+         <h4>User Added SuccessFully!</h4>
+         <button (click)="addPersonForm()" class='btn btn-primary'>Add More User</button>
+      </div>      
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+

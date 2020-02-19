@@ -8,10 +8,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Running Application Process
 
-After runnign the application hit the `http://localhost:4200/` url and you will see a login page.
-Login with embl as username and password too after which you will be redirected to home page having list of users.
-From here you can add users by using add button, see list of users by using see users button and do other operations like update and delete the users.
-At last their is logout button too after finishing all stuffs. Enjoy.!
+* After runnign the application hit the `http://localhost:4200/` url and you will see a login page.
+* Login with embl as username and password too after which you will be redirected to home page having list of users.
+* From here you can add users by using add button, see list of users by using see users button and do other operations like update and delete the users.
+* At last their is logout button too after finishing all stuffs. Enjoy.!
 
 
 ## Code scaffolding

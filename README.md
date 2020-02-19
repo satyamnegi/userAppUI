@@ -36,4 +36,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Backend Service
 
-Please check for the backend service code for this app [https://github.com/satyamnegi/userAppService.git]https://github.com/satyamnegi/userAppService.git
+Please check for the backend service code for this app [https://github.com/satyamnegi/userAppService.git](https://github.com/satyamnegi/userAppService.git)

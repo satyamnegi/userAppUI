@@ -4,11 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## Running Application Process
 
-* After runnign the application hit the `http://localhost:4200/` url and you will see a login page.
+* As a next step i would be deploying this app too into cloud but for now you have to download and install the same.
+* After running the application hit the [http://localhost:4200/](http://localhost:4200/) url and you will see a login page.
 * Login with embl as username and password too after which you will be redirected to home page having list of users.
 * From here you can add users by using add button, see list of users by using see users button and do other operations like update and delete the users.
 * At last their is logout button too after finishing all stuffs. Enjoy.!
